@@ -29,7 +29,7 @@ class Editor extends React.Component {
           id="editor"
           onChange={this.handleChange}
           value={
-            "#NADPIS\n##PODNADPIS" +
+            "#NADPIS\r\n##PODNADPIS" +
             "sdsfsdfsd\nqwerwrwerw\nqwerqwerwq\nsdsdsdsdsd\n" +
             "safdsfsdf"
           }
