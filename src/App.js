@@ -27,8 +27,12 @@ class Editor extends React.Component {
       <div>
         <textarea
           id="editor"
-          value={this.state.input}
           onChange={this.handleChange}
+          value={
+            "#NADPIS\n##PODNADPIS" +
+            "sdsfsdfsd\nqwerwrwerw\nqwerqwerwq\nsdsdsdsdsd\n" +
+            "safdsfsdf"
+          }
         ></textarea>
         <Previewer input={this.state.input} />
       </div>
