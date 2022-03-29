@@ -38,9 +38,16 @@ class Editor extends React.Component {
 
 class Previewer extends React.Component {
   render() {
+    let h1 = "";
+
+    if (this.props.input[0] === "#" && this.props.input[1] === " ") {
+      h1 = <h1>{this.props.input}</h1>;
+    }
+
     return (
       <div id="preview">
-        <h1>{this.props.input}</h1>
+        {this.props.input}
+        {h1}
       </div>
     );
   }
