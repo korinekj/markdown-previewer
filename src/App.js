@@ -27,7 +27,7 @@ class Editor extends React.Component {
       <div>
         <textarea id="editor" onChange={this.handleChange}>
           {"# Welcome to my React Markdown Previewer!\n\n" +
-            "##This is a sub-heading...\n\n" +
+            "## This is a sub-heading...\n\n" +
             "### And here's some other cool stuff:\n\n" +
             "Heres some code, `<div></div>`, between 2 backticks.\n\n" +
             "```\n" +
