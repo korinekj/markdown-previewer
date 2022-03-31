@@ -1,11 +1,9 @@
 #editor {
   border: 1px solid black;
-  width: 500px;
-  height: 80vh;
+  width: 50vw;
+  height: 50vh;
 }
 
 #preview {
   border: 1px solid black;
-  width: 500px;
-  height: 200px;
 }

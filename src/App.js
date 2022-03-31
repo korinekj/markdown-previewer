@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+import { marked } from "marked";
 
 class App extends React.Component {
   render() {
@@ -25,7 +26,11 @@ class Editor extends React.Component {
   render() {
     return (
       <div>
-        <textarea id="editor" onChange={this.handleChange}>
+        <textarea
+          id="editor"
+          onChange={this.handleChange}
+          open={this.handleChange}
+        >
           {"# Welcome to my React Markdown Previewer!\n\n" +
             "## This is a sub-heading...\n\n" +
             "### And here's some other cool stuff:\n\n" +
@@ -65,17 +70,13 @@ class Editor extends React.Component {
 
 class Previewer extends React.Component {
   render() {
-    let h1 = "";
-
-    if (this.props.input[0] === "#" && this.props.input[1] === " ") {
-      h1 = <h1>{this.props.input}</h1>;
-    }
-
     return (
-      <div id="preview">
-        {this.props.input}
-        {h1}
-      </div>
+      <div
+        id="preview"
+        dangerouslySetInnerHTML={{
+          __html: marked(this.props.input),
+        }}
+      ></div>
     );
   }
 }
