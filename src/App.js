@@ -23,14 +23,18 @@ class Editor extends React.Component {
     });
   }
 
+  //když se stránka poprvé načte, markdown z #editoru se vyrenderuje jako HTML v #preview
+  componentDidMount(e) {
+    console.log(document);
+    this.setState({
+      input: document.getElementById("editor").value,
+    });
+  }
+
   render() {
     return (
       <div>
-        <textarea
-          id="editor"
-          onChange={this.handleChange}
-          open={this.handleChange}
-        >
+        <textarea id="editor" onChange={this.handleChange}>
           {"# Welcome to my React Markdown Previewer!\n\n" +
             "## This is a sub-heading...\n\n" +
             "### And here's some other cool stuff:\n\n" +
@@ -47,7 +51,7 @@ class Editor extends React.Component {
             "Or _italic_.\n" +
             "Or... wait for it... **_both!_**\n" +
             "And feel free to go crazy ~~crossing stuff out~~.\n\n" +
-            "There's also [links](https://www.freecodecamp.org), and > Block Quotes!\n\n" +
+            "There's also [links](https://www.freecodecamp.org), and\n > Block Quotes!\n\n" +
             "And if you want to get really crazy, even tables:\n\n" +
             "Wild Header | Crazy Header | Another Header?\n" +
             "------------ | ------------- | -------------\n" +
