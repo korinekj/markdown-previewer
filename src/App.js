@@ -1,6 +1,8 @@
 import "./App.css";
 import React from "react";
 import { marked } from "marked";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMaximize } from "@fortawesome/free-solid-svg-icons";
 
 class App extends React.Component {
   render() {
@@ -36,7 +38,12 @@ class Editor extends React.Component {
       <div>
         <div id="editor-wrap">
           <header id="editor-header">
-            <h1>Editor</h1>
+            <h1>
+              Editor
+              <span class="maximize-window">
+                <FontAwesomeIcon icon={faMaximize} />
+              </span>
+            </h1>
           </header>
           <textarea id="editor" onChange={this.handleChange} rows="15">
             {"# Welcome to my React Markdown Previewer!\n\n" +
@@ -83,7 +90,12 @@ class Previewer extends React.Component {
     return (
       <div id="preview-wrap">
         <header id="preview-header">
-          <h1>Previewer</h1>
+          <h1>
+            Previewer
+            <span class="maximize-window">
+              <FontAwesomeIcon icon={faMaximize} />
+            </span>
+          </h1>
         </header>
         <div
           id="preview"
