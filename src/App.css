@@ -1,22 +1,37 @@
-#editor-wrap, #preview-wrap {
-  width: 50vw;
-  padding: 0;
-  margin-bottom: 50px;
-}
 
-#editor, #preview {
-  width: 50vw;
-  border: 1px solid black;
-  padding: 0;
+
+#editor-wrap, #preview-wrap {
+  width: 1000px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #editor-header, #preview-header {
   border: 1px solid black;
+  background-color: #4AA3A3;
+}
+
+#editor, #preview {
+  width: 1000px;
+  border: 1px solid black;
+  padding: 0;
+  background-color: #C0D8D8;
+}
+
+.maximize-window {
+  color: #262A0F;
+  float: right;
+  padding-right: 20px;
 }
 
 
-.maximize-window {
-  color: red;
-  float: right;
-  padding-right: 20px;
+
+.hide {
+  display: none;
+}
+
+.maximize {
+  height: 80vh;
+  overflow: hidden;
 }
