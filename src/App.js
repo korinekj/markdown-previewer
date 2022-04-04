@@ -133,6 +133,10 @@ class Editor extends React.Component {
 
 class Previewer extends React.Component {
   render() {
+    marked.setOptions({
+      breaks: true, // If true, add <br> on a single line break
+    });
+
     return (
       <div id="preview-wrap" className={this.props.editorIsMax ? "hide" : ""}>
         <header id="preview-header">
