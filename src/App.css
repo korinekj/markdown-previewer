@@ -1,6 +1,6 @@
-#editor-wrap, 
+#editor-wrap,
 #preview-wrap {
-  width: 70%;
+  width: 50%;
   margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
@@ -10,19 +10,19 @@
 #preview-header {
   width: 99%;
   border: 1px solid black;
-  background-color: #4AA3A3;
+  background-color: #4aa3a3;
 }
 
 #editor,
 #preview {
-  width: 99%;
+  max-width: 99%;
   border: 1px solid black;
   padding: 0;
-  background-color: #C0D8D8;
+  background-color: #c0d8d8;
 }
 
 #preview img {
-  max-width: 99%;
+  max-width: 70%;
   display: block;
   margin: 2rem auto;
 }
@@ -32,7 +32,7 @@
 }
 
 .maximize-window {
-  color: #262A0F;
+  color: #262a0f;
   float: right;
   padding-right: 1rem;
 }
